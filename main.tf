@@ -72,6 +72,7 @@ resource "aws_cloudwatch_event_rule" "scheduled_task" {
   name                = "${var.name}_${var.environment}_scheduled_task"
   description         = "Run ${var.name}_${var.environment} task at a scheduled time (${var.schedule_expression})"
   schedule_expression = var.schedule_expression
+  is_enabled          = var.is_enabled
 }
 
 resource "aws_cloudwatch_event_target" "scheduled_task" {

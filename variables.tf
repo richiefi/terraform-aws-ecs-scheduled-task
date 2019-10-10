@@ -45,3 +45,7 @@ variable "memory" {
   description = "The amount (in MiB) of memory used by the task"
 }
 
+variable "is_enabled" {
+  type        = bool
+  default     = true
+}
